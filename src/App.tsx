@@ -580,16 +580,16 @@ export default function App() {
                 </div>
                 
                 <h2 className="text-7xl font-black italic uppercase tracking-tighter text-white">
-                  INSPECTION COMPLETE <br />
+                  CONCEPT UNDERSTOOD <br />
                   <span className="text-green-500">MISSION ACCOMPLISHED</span>
                 </h2>
                 
                 <div className="flex items-center justify-center gap-4 text-zinc-500 font-mono text-sm tracking-[0.4em] uppercase">
-                  <span>Sector Seal</span>
+                  <span>SECTOR SEAL</span>
                   <span>//</span>
-                  <span>Data Verified</span>
+                  <span>DATA VERIFIED</span>
                   <span>//</span>
-                  <span>Logic Optimal</span>
+                  <span>LOGIC OPTIMAL</span>
                 </div>
 
                 <div className="pt-12">
