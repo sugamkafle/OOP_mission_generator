@@ -59,7 +59,11 @@ const Header = () => (
     <h1 className="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-white to-cyan-400 mb-2 uppercase tracking-tighter">
       OOP Mission Generator
     </h1>
-    <p className="text-zinc-500 font-mono text-sm tracking-widest">SYSTEM_VERSION: 1.0.4 // SECTOR: EDUCATIONAL_SIM</p>
+    <p className="text-zinc-500 font-mono text-sm tracking-tight max-w-2xl mx-auto leading-relaxed">
+      Write the name of the students in the agents side, and list of available classroom materials to interact with in the other side. 
+      <br />
+      <span className="text-cyan-400 mt-2 block font-bold">Hit Generate Mission to generate task list.</span>
+    </p>
   </header>
 );
 
@@ -542,45 +546,12 @@ export default function App() {
                       );
                     })}
                     
-                    <motion.div 
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: mission.tasks.length * 0.1 }}
-                      className="pt-8 text-cyan-400 animate-pulse text-sm"
-                    >
-                      &gt; _ WAITING_FOR_SECTOR_CLEARANCE...
-                    </motion.div>
+                    {/* Removed sector clearance indicator */}
                   </div>
                 </div>
               </div>
 
-              {/* Status Bar */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl">
-                  <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Team_A Count</div>
-                  <div className="text-2xl font-mono font-bold text-cyan-400">
-                    {mission.agents.filter(a => a.team === 'Team_A').length} Personnel
-                  </div>
-                </div>
-                <div className="bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl">
-                  <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Team_B Count</div>
-                  <div className="text-2xl font-mono font-bold text-purple-400">
-                    {mission.agents.filter(a => a.team === 'Team_B').length} Personnel
-                  </div>
-                </div>
-                <div className="bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl">
-                  <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Total Operations</div>
-                  <div className="text-2xl font-mono font-bold text-yellow-400">
-                    {mission.tasks.length} Logic_Cycles
-                  </div>
-                </div>
-                <div className="bg-zinc-900/50 border border-zinc-800 p-4 rounded-xl">
-                  <div className="text-[10px] text-zinc-500 uppercase tracking-widest mb-1">Mission Integrity</div>
-                  <div className="text-2xl font-mono font-bold text-green-400">
-                    {Math.round((completedTaskIds.size / (mission.tasks.length || 1)) * 100)}% Complete
-                  </div>
-                </div>
-              </div>
+              {/* Status Bar Removed */}
             </motion.div>
           )}
         </AnimatePresence>
